@@ -3,7 +3,7 @@ AC_INIT([tv_grab_dvb_plus], [0.2.1], [tv_grab_dvb_plus@teilifis.com])
 AM_INIT_AUTOMAKE([-Wall -Werror])
 AC_PROG_CXX
 AC_PROG_RANLIB
-
+m4_ifdef([AM_PROG_AR], [AM_PROG_AR])
 AC_CHECK_HEADERS([fcntl.h stdint.h stdlib.h string.h sys/ioctl.h unistd.h])
 
 AC_CONFIG_SRCDIR([config.h.in])
@@ -29,3 +29,4 @@ AC_FUNC_REALLOC
 AC_CHECK_FUNCS([alarm dup2 memmove memset mkdir strcasecmp strerror strrchr])
 
 AC_OUTPUT
+
